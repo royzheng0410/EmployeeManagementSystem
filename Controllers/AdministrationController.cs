@@ -12,7 +12,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace EmployeeManagement.Controllers
 {
-    [Authorize(Roles = "Admin, Curator")]
+    
     public class AdministrationController : Controller
     {
         private readonly RoleManager<IdentityRole> roleManager;
@@ -22,6 +22,32 @@ namespace EmployeeManagement.Controllers
         {
             this.roleManager = roleManager;
             this.userManager = userManager;
+        }
+
+        public async Task<IActionResult> DeleteRole(string id)
+        {
+            var role = await roleManager.FindByIdAsync(id);
+            if (role == null)
+            {
+                ViewBag.ErrorMessage = $"Role with Id = {id} cannot be found";
+                return View("notfound");
+            }
+            else
+            {
+                var result = await roleManager.DeleteAsync(role);
+                if (result.Succeeded)
+                {
+                    return RedirectToAction("ListRoles");
+                }
+                foreach (var error in result.Errors)
+                {
+                    ModelState.AddModelError("", error.Description);
+                }
+
+                return View("ListRoles");
+            }
+
+
         }
 
         public async Task<IActionResult> DeleteUser(string id)
