@@ -41,3 +41,4 @@ C:\Users\chen\source\repos\EmployeeManagement\EmployeeManagement\obj\Debug\netco
 C:\Users\chen\source\repos\EmployeeManagement\EmployeeManagement\obj\Debug\netcoreapp2.2\Razor\Views\Account\AccessDenied.g.cshtml.cs
 C:\Users\chen\source\repos\EmployeeManagement\EmployeeManagement\obj\Debug\netcoreapp2.2\Razor\Views\Administration\ListUsers.g.cshtml.cs
 C:\Users\chen\source\repos\EmployeeManagement\EmployeeManagement\obj\Debug\netcoreapp2.2\Razor\Views\Administration\EditUser.g.cshtml.cs
+C:\Users\chen\source\repos\EmployeeManagement\EmployeeManagement\obj\Debug\netcoreapp2.2\Razor\Views\Administration\ManageUserRoles.g.cshtml.cs
