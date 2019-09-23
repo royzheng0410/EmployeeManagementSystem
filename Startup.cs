@@ -41,6 +41,11 @@ namespace EmployeeManagement
                 options.Filters.Add(new AuthorizeFilter(policy));
             }).AddXmlDataContractSerializerFormatters();
 
+            services.ConfigureApplicationCookie(options =>
+            {
+                options.AccessDeniedPath = new PathString("/Administration/AccessDenied");
+            });
+
             // Claims Policy
             services.AddAuthorization(options =>
             {
