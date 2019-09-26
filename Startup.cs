@@ -42,6 +42,13 @@ namespace EmployeeManagement
                 options.Filters.Add(new AuthorizeFilter(policy));
             }).AddXmlDataContractSerializerFormatters();
 
+            services.AddAuthentication()
+                .AddGoogle(options =>
+                {
+                    options.ClientId = "756075902357-0uoj4fu3h940553fhohg4l03ir45dupu.apps.googleusercontent.com";
+                    options.ClientSecret = "i_bpM2mreofF3rFpA_KEKaDh";
+                });
+
             services.ConfigureApplicationCookie(options =>
             {
                 options.AccessDeniedPath = new PathString("/Administration/AccessDenied");
