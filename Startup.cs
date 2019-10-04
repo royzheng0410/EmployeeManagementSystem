@@ -47,6 +47,10 @@ namespace EmployeeManagement
                 {
                     options.ClientId = "756075902357-0uoj4fu3h940553fhohg4l03ir45dupu.apps.googleusercontent.com";
                     options.ClientSecret = "i_bpM2mreofF3rFpA_KEKaDh";
+                })
+                .AddFacebook(options => {
+                    options.AppId = "479688429283855";
+                    options.AppSecret = "71cd06e5bce19ae8dc574e2dfef537da";
                 });
 
             services.ConfigureApplicationCookie(options =>
