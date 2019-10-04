@@ -45,12 +45,12 @@ namespace EmployeeManagement
             services.AddAuthentication()
                 .AddGoogle(options =>
                 {
-                    options.ClientId = "756075902357-0uoj4fu3h940553fhohg4l03ir45dupu.apps.googleusercontent.com";
-                    options.ClientSecret = "i_bpM2mreofF3rFpA_KEKaDh";
+                    options.ClientId = _config["Google:ClientId"];
+                    options.ClientSecret = _config["Google:ClientSecret"];
                 })
                 .AddFacebook(options => {
-                    options.AppId = "479688429283855";
-                    options.AppSecret = "71cd06e5bce19ae8dc574e2dfef537da";
+                    options.AppId = _config["Facebook:AppId"];
+                    options.AppSecret = _config["Facebook:AppSecret"];
                 });
 
             services.ConfigureApplicationCookie(options =>
