@@ -222,7 +222,15 @@ namespace EmployeeManagement.Controllers
                             UserName = info.Principal.FindFirstValue(ClaimTypes.Email),
                             Email = info.Principal.FindFirstValue(ClaimTypes.Email)
                         };
-                    await userManager.CreateAsync(user);
+                        await userManager.CreateAsync(user);
+
+                        var token = await userManager.GenerateEmailConfirmationTokenAsync(user);
+                        var confirmationLink = Url.Action("Confirmation", "Account", new { userId = user.Id, token = token }, Request.Scheme);
+
+                        logger.Log(LogLevel.Warning, confirmationLink);
+                        ViewBag.ErrorTitle = "Registration successful";
+                        ViewBag.ErrorMessage = "Before you can login, please confirm your email, by clicking on the confirmation link we have emailed you";
+                        return View("Error");
                     }
                     await userManager.AddLoginAsync(user, info);
                     await signInManager.SignInAsync(user, isPersistent: false);
