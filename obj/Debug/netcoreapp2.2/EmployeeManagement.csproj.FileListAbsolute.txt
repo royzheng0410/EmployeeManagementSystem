@@ -46,3 +46,5 @@ C:\Users\chen\source\repos\EmployeeManagement\EmployeeManagement\obj\Debug\netco
 C:\Users\chen\source\repos\EmployeeManagement\EmployeeManagement\obj\Debug\netcoreapp2.2\Razor\Views\Account\Confirmation.g.cshtml.cs
 C:\Users\chen\source\repos\EmployeeManagement\EmployeeManagement\obj\Debug\netcoreapp2.2\Razor\Views\Account\ForgotPassword.g.cshtml.cs
 C:\Users\chen\source\repos\EmployeeManagement\EmployeeManagement\obj\Debug\netcoreapp2.2\Razor\Views\Account\ForgotPasswordConfirmation.g.cshtml.cs
+C:\Users\chen\source\repos\EmployeeManagement\EmployeeManagement\obj\Debug\netcoreapp2.2\Razor\Views\Account\ResetPassword.g.cshtml.cs
+C:\Users\chen\source\repos\EmployeeManagement\EmployeeManagement\obj\Debug\netcoreapp2.2\Razor\Views\Account\ResetPasswordConfirmation.g.cshtml.cs
